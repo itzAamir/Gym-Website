@@ -1,0 +1,420 @@
+:root{
+    --secondary-color: #e63046
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    height: 360px;
+    background-color: #000;
+    color: white;
+}
+
+hr{
+    opacity: 0.1;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 630px;
+    background: url("/images/BG.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+
+/* Navigation Bar Starts Here */
+.nav{
+    display: flex;
+    position: sticky;
+    /* border: 2px solid black; */
+    height: 70px;
+    z-index: 1;
+    /* background-color: black; */
+}
+
+.logo{
+    position: absolute;
+    background: url("/images/logo1.png") no-repeat center center/cover;
+    width: 65px;
+    height: 70px;
+    left: 10px;
+    top: 6px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.10rem black)
+}
+
+.logo:hover{
+    width: 66px;
+    height: 71px;
+}
+
+.logo-text{
+    /* border: 2px solid black; */
+    position: relative;
+    /* z-index: -1; */
+    font-size: 20px;
+    left: 75px;
+    top: 20px;
+    height: fit-content;
+    font-weight: bold;
+    cursor: pointer;
+    animation: ease 1s;
+}
+
+.logo-text:hover{
+    font-size: 20.2px;
+    text-shadow : 4px 4px 20px black;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.links ul li{
+    display: inline;
+    list-style: none;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: ease-in-out 0.2s;
+    opacity: 0.8;
+}
+
+.links a:hover{
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
+
+/* Hero Section Starts From Here */
+.hero-section{
+    /* border: 2px solid black; */
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-text{
+    position: absolute;
+    top: 14rem;
+    /* border: 2px solid black; */
+    text-align: left;
+    /* right: 3rem; */
+    width: 50%;
+    cursor: context-menu;
+}
+
+
+.secondary-text{
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+#secondary-text{
+    /* border: 2px solid black; */
+    position: relative;
+    top: 3px;
+    opacity: 0.6;
+}
+
+.secondary-color{
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+#line{
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    bottom: 1px;
+}
+
+.primary-text{
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    left: 10px;
+}
+
+.buttons{
+    position: relative;
+    /* border: 2px solid beige; */
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    right: 13%;
+    top: 3em;
+}
+.btn{
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 25px;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.btnL{
+    color: white;
+    transition: ease 0.6s;
+}
+
+.btnL:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.btnR{  
+    background-color: var(--secondary-color);
+    color: white;
+    transition: ease 0.6s;
+    border: none;
+}
+
+.btnR:hover{
+    background-color: white;
+    border: 2px solid white;
+}
+
+.btnR a:hover{
+    color: var(--secondary-color);
+}
+
+.center-img{
+    position: absolute;
+    background: url("/images/workout.png") no-repeat center center/cover;
+    width: 450px;
+    height: 450px;
+    /* border: 2px solid black; */
+    right: 12%;
+    animation: sliding 6s linear infinite alternate both;
+}
+
+@keyframes sliding{
+    0%{
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+    33%{
+        transform: translateX(-5px);
+        transform: translateY(-5px);
+    }
+    
+    66%{
+        transform: translateX(5px);
+        transform: translateY(5px);
+    }
+
+    99%{
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+
+}
+
+
+/* Price Container Starts Here */
+.price-container{
+    position: absolute;
+    /* border: 2px solid white; */
+    height: 100vh;
+    top: 100%;
+    width: 97vw;
+    text-align: center;
+}
+
+#price-heading{
+    position: relative;
+    top: 40px;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 40px;
+    cursor: context-menu;
+}
+
+.card-container{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    /* border: 2px solid white; */
+    position: relative;
+    top: 130px;
+    flex-flow: row;
+    margin: auto;
+}
+
+.price-cards{
+    /* border: 2px solid white; */
+    width: 35%;
+    padding: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.price-cards:hover{
+    opacity: 0.7;
+}
+
+.price-cards h1{
+    font-style: italic;
+}
+
+.price-cards h3{
+    font-weight: lighter;
+}
+
+.price-div h1{
+    font-size: 62px;
+    font-style: normal;
+    display: inline-block;
+    position: relative;
+    right: 12px;
+}
+
+.price-div sup{
+    font-size: 20px;
+}
+
+.price-div h1+span{
+    position: relative;
+    right: 12px;
+}
+
+.light-op{
+    opacity: 0.5;
+}
+
+.price-features{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.price-features p{
+    margin-top: 15px;
+}
+
+#highlighted-block{
+    box-shadow: 2px 2px 20px var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+#highlighted-block h1{
+    color: black;
+}
+
+#highlighted-block h1+span{
+    color: black;
+}
+
+.price-cards a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Story Container Starts Here */
+
+#story-container::before{
+    position: absolute;
+    content: "";
+    background: url("/images/BG2.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    top: 220%;
+    left: 0%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#story-container h1{
+    position: relative;
+    top: 123vh;
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.story{
+    position: relative;
+    top: 145vh;
+    height: 60vh;
+    width: 30%;
+    left: 60%;
+    background-color: transparent;
+    /* border: 2px solid wheat; */
+    font-size: 20px;
+    text-align: left;
+    line-height: 30px;
+}
+
+#ReadM{
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    transition: ease 0.6s;
+}
+
+#ReadM:hover{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.story-img{
+    position: absolute;
+    top: 238%;
+    height: 423px;
+    width: 140px;
+    left: 10%;
+}
+
+.story-img img{ 
+    height: 450px ;
+    /* text-shadow: 2px 2px 20px white; */
+    filter: drop-shadow(0 0 0.30rem var(--secondary-color));
+    animation: sliding 6s linear infinite alternate both;
+}
