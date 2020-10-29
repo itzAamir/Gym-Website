@@ -1,0 +1,71 @@
+.links{
+    display: none;
+}
+
+.logo{
+    /* border: 2px solid white; */
+    display: block;
+    /* position: absolute; */
+    left: 20%;
+}
+
+.logo-text{
+    left: 40%;
+}
+
+.center-img{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    bottom: 4rem;
+    left: 5rem;
+}
+
+.center-text{
+    /* border: 2px solid white; */
+    position: absolute;
+    top: 18%;
+    left: 7%;
+}
+
+.secondary-text{
+    font-size: 15px;
+}
+
+.buttons{
+    /* border: 2px solid white; */
+    width: 300px;
+    position: absolute;
+    height: min-content;
+    top: 50vh;
+}
+
+.btn{
+    font-size: 20px;
+    width: 8rem;
+}
+
+.price-container{
+    display: none;
+}
+
+#story-container{
+    display: none;
+}
+
+.contact-form-container{
+    position: absolute;
+    top: 80vh;
+    left: 10%;
+    width: 80vw;
+    height: min-content;
+    margin: auto;
+}
+
+footer{
+    position: absolute;
+    top: 172.5vh;
+    width: 100%;
+    font-size: 15px;
+    /* border: 2px solid white; */
+}

@@ -353,8 +353,8 @@ hr{
     color: white;
 }
 
-/* Story Container Starts Here */
 
+/* Story Container Starts Here */
 #story-container::before{
     position: absolute;
     content: "";
