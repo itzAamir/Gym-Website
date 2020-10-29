@@ -28,7 +28,7 @@ hr{
     position: absolute;
     width: 100%;
     height: 630px;
-    background: url("/images/BG.jpg") no-repeat center center/cover;
+    background: url("../images/BG.jpg") no-repeat center center/cover;
     z-index: -1;
     opacity: 0.3;
 }
@@ -46,7 +46,7 @@ hr{
 
 .logo{
     position: absolute;
-    background: url("/images/logo1.png") no-repeat center center/cover;
+    background: url("../images/logo1.png") no-repeat center center/cover;
     width: 65px;
     height: 70px;
     left: 10px;
@@ -109,6 +109,10 @@ hr{
 .links a:hover{
     color: var(--secondary-color);
     font-size: 22px;
+}
+
+.active a{
+    color: var(--secondary-color);
 }
 
 
@@ -219,7 +223,7 @@ hr{
 
 .center-img{
     position: absolute;
-    background: url("/images/workout.png") no-repeat center center/cover;
+    background: url("../images/workout.png") no-repeat center center/cover;
     width: 450px;
     height: 450px;
     /* border: 2px solid black; */
@@ -233,13 +237,13 @@ hr{
         transform: translateY(0px);
     }
     33%{
-        transform: translateX(-5px);
-        transform: translateY(-5px);
+        transform: translateX(-10px);
+        transform: translateY(-10px);
     }
     
     66%{
-        transform: translateX(5px);
-        transform: translateY(5px);
+        transform: translateX(10px);
+        transform: translateY(10px);
     }
 
     99%{
@@ -354,7 +358,7 @@ hr{
 #story-container::before{
     position: absolute;
     content: "";
-    background: url("/images/BG2.jpg") no-repeat center center/cover;
+    background: url("../images/BG2.jpg") no-repeat center center/cover;
     width: 100%;
     height: 100vh;
     top: 220%;
@@ -388,7 +392,7 @@ hr{
     line-height: 30px;
 }
 
-#ReadM{
+#ReadM, .primary-btn{
     background-color: var(--secondary-color);
     color: white;
     font-size: 15px;
@@ -399,13 +403,13 @@ hr{
     transition: ease 0.6s;
 }
 
-#ReadM:hover{
+#ReadM:hover, .primary-btn:hover{
     background-color: white;
     color: var(--secondary-color);
 }
 
 .story-img{
-    position: absolute;
+    position: absolute; 
     top: 238%;
     height: 423px;
     width: 140px;
@@ -417,4 +421,72 @@ hr{
     /* text-shadow: 2px 2px 20px white; */
     filter: drop-shadow(0 0 0.30rem var(--secondary-color));
     animation: sliding 6s linear infinite alternate both;
+}
+
+
+/* Form Container Starts Here */
+.contact-form-container{
+    position: relative;
+    top: 270%;
+    height: 100vh;
+    width: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+}
+
+#contact-heading{
+    /* position: relative; */
+    display: block;
+    margin: 15px auto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    cursor: context-menu;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox input, textarea{
+    margin: 10px 0px;
+    font-size: 18px;
+    padding: 10px 0px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid white;
+    resize: none;
+}
+
+.flexbox label{
+    margin-top: 10px;
+    opacity: 0.3;
+}
+
+form{
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+#submit{
+    /* border: none; */
+    outline: none;
+}
+
+footer{
+    position: relative;
+    top: 151vh;
+    z-index: 2;
+    display: block;
+    margin: auto;
+    background-color: #0f0f0f;
+    text-align: center;
+    padding: 10px 0px;
+    letter-spacing: 2px;
+    font-size: 15px;
 }
